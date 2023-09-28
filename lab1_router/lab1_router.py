@@ -16,7 +16,7 @@ port = 4008
 
 
 tn = telnetlib.Telnet(HOST, port)
-config_filename='bebra.txt'
+config_filename='lab1_router/bebra.txt'
 with open(config_filename, 'r') as config_file:
     for line in config_file:
         tn.write(line.encode('utf-8') + b"\n")
