@@ -1,4 +1,4 @@
-
+# -*- coding: utf-8 -*-
 #from telnetlib import Telnet
 #with Telnet('172.17.9.151', 4008) as tn:
 #   tn.interact()
@@ -25,7 +25,7 @@ with open(config_filename, 'r') as config_file:
 #tn.read_until(b"# ")
 
 #config_filename = 'bebra.txt'
-## Ожидание приглашения для ввода команды
+## ГЋГ¦ГЁГ¤Г Г­ГЁГҐ ГЇГ°ГЁГЈГ«Г ГёГҐГ­ГЁГї Г¤Г«Гї ГўГўГ®Г¤Г  ГЄГ®Г¬Г Г­Г¤Г»
 #tn.write(b"configure terminal\n")
 #with open(config_filename, 'r') as config_file:
 #    for line in config_file:
@@ -35,35 +35,35 @@ with open(config_filename, 'r') as config_file:
 
 #import telnetlib
 
-## Параметры подключения к коммутатору Cisco
+## ГЏГ Г°Г Г¬ГҐГІГ°Г» ГЇГ®Г¤ГЄГ«ГѕГ·ГҐГ­ГЁГї ГЄ ГЄГ®Г¬Г¬ГіГІГ ГІГ®Г°Гі Cisco
 #host = '172.17.9.151:'
 
 
-## Имя файла с конфигурацией, который нужно загрузить
+## Г€Г¬Гї ГґГ Г©Г«Г  Г± ГЄГ®Г­ГґГЁГЈГіГ°Г Г¶ГЁГҐГ©, ГЄГ®ГІГ®Г°Г»Г© Г­ГіГ¦Г­Г® Г§Г ГЈГ°ГіГ§ГЁГІГј
 #config_filename = 'bebra.txt'
 
-## Подключение к коммутатору Cisco через Telnet
+## ГЏГ®Г¤ГЄГ«ГѕГ·ГҐГ­ГЁГҐ ГЄ ГЄГ®Г¬Г¬ГіГІГ ГІГ®Г°Гі Cisco Г·ГҐГ°ГҐГ§ Telnet
 #try:
 #    tn = telnetlib.Telnet(host)
 #except Exception as e:
-#    print(f"Ошибка при подключении: {str(e)}")
+#    print(f"ГЋГёГЁГЎГЄГ  ГЇГ°ГЁ ГЇГ®Г¤ГЄГ«ГѕГ·ГҐГ­ГЁГЁ: {str(e)}")
 #    exit()
 
 
-## Ожидание приглашения для ввода команды
+## ГЋГ¦ГЁГ¤Г Г­ГЁГҐ ГЇГ°ГЁГЈГ«Г ГёГҐГ­ГЁГї Г¤Г«Гї ГўГўГ®Г¤Г  ГЄГ®Г¬Г Г­Г¤Г»
 #tn.read_until(b"# ")
 
-## Отправка команды для загрузки конфигурации из файла
+## ГЋГІГЇГ°Г ГўГЄГ  ГЄГ®Г¬Г Г­Г¤Г» Г¤Г«Гї Г§Г ГЈГ°ГіГ§ГЄГЁ ГЄГ®Г­ГґГЁГЈГіГ°Г Г¶ГЁГЁ ГЁГ§ ГґГ Г©Г«Г 
 #tn.write(b"configure terminal\n")
 #with open(config_filename, 'r') as config_file:
 #    config_text = config_file.read()
 #    tn.write(config_text.encode('ascii') + b"\n")
 #    tn.write(b"end\n")
 
-## Завершение сеанса Telnet
+## Г‡Г ГўГҐГ°ГёГҐГ­ГЁГҐ Г±ГҐГ Г­Г±Г  Telnet
 #tn.write(b"exit\n")
 
-#print("Конфигурация загружена успешно.")
+#print("ГЉГ®Г­ГґГЁГЈГіГ°Г Г¶ГЁГї Г§Г ГЈГ°ГіГ¦ГҐГ­Г  ГіГ±ГЇГҐГёГ­Г®.")
 
 
 
